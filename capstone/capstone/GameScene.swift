@@ -1,10 +1,3 @@
-//
-//  GameScene.swift
-//  capstone
-//
-//  Created by Donovan Capps on 3/25/21.
-//  Last edited on 4/25/21
-
 import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -157,15 +150,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 box.physicsBody?.isDynamic = false
                 
                 addChild(box)
+                    
             } else {
-                let minX = 0
-                let maxX = 100
-                let minY = 0
-                let maxY = 100
-                let randomX = CGFloat.random(in: minX..<maxX)
-                let randomY = CGFloat.random(in: minY..<maxY)
                 
-                makeBall(at: CGPoint(x: randomX, y: randomY))
+                makeBall(at: CGPoint(x: 100, y: 700))
             }
             }
         }
@@ -195,8 +183,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             addChild(waterParticles)
         }
             
-        
-        
         ball.removeFromParent()
     }
     
